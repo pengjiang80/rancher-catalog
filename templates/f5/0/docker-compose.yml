@@ -1,0 +1,9 @@
+external-lb:
+  image: prachidamle/external-lb:v0.1.0
+  command: -debug -provider=f5_BigIP
+  expose: 
+   - 1000
+  environment:
+    F5_BIGIP_HOST: ${F5_BIGIP_HOST}
+    F5_BIGIP_USER: ${F5_BIGIP_USER}
+    F5_BIGIP_PWD: ${F5_BIGIP_PWD}
