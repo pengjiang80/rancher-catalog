@@ -1,6 +1,8 @@
 external-lb:
   image: prachidamle/external-lb:v0.1.0
   command: -debug -provider=f5_BigIP
+  env_file:
+   - /var/tmp/common.env
   expose: 
    - 1000
   environment:
